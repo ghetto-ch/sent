@@ -1,12 +1,32 @@
+# Project binaries
+sent
+
+# Project patches
+patches
+
+# Prerequisites
+*.d
+
 # Object files
 *.o
 *.ko
 *.obj
 *.elf
 
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
 # Libraries
 *.lib
 *.a
+*.la
+*.lo
 
 # Shared objects (inc. Windows DLLs)
 *.dll
@@ -21,10 +41,25 @@
 *.i*86
 *.x86_64
 *.hex
-/sent
 
-# vim
-*.swp
-*~
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
 
-config.h
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+# Diff files
+*.diff
+
+# Tags and flags
+tags
+compile_commands.json

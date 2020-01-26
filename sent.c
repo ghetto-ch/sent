@@ -258,14 +258,15 @@ ffload(Slide *s)
 void
 ffprepare(Image *img)
 {
+	/* For images, use all available space */
 	int depth = DefaultDepth(xw.dpy, xw.scr);
-	int width = xw.uw;
-	int height = xw.uh;
+	int width = xw.w;
+	int height = xw.h;
 
-	if (xw.uw * img->bufheight > xw.uh * img->bufwidth)
-		width = img->bufwidth * xw.uh / img->bufheight;
+	if (xw.w * img->bufheight > xw.h * img->bufwidth)
+		width = img->bufwidth * xw.h / img->bufheight;
 	else
-		height = img->bufheight * xw.uw / img->bufwidth;
+		height = img->bufheight * xw.w / img->bufwidth;
 
 	if (depth < 24)
 		die("sent: Display color depths < 24 not supported");
